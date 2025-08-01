@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nodered:
+    image: nodered/node-red:3.1
+    container_name: nodered-capstone
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
